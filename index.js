@@ -1,20 +1,19 @@
-let number = Math.floor(Math.random() * 101);
+let number = Math.floor(Math.random() * 100) + 1;
 let counter = 0;
 
-document.getElementById("check").addEventListener(
-    "click",
-    function() {
+document.getElementById("check").addEventListener("click",function() {
         let num = document.getElementById("nr_gamer").value;
+        
         counter++;
         document.getElementById("count").innerHTML= ("This is your " + counter + ". try.");
 
         if (num == number) {
             alert("Congratulation! You are the winner! This is your " + counter + ". try.");
-            document.getElementById("result").innerHTML = ("You are right!")
+            // document.getElementById("result").innerHTML = ("You are right!")
             
             let new_game = confirm("Do you wanna play again??");
             if (new_game == true){
-                number = Math.floor(Math.random() * 101);
+                number = Math.floor(Math.random() * 100) + 1;
                 counter = 0;
                 document.getElementById("result").innerHTML = ("");
                 document.getElementById("count").innerHTML= ("");
