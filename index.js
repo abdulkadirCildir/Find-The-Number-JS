@@ -26,10 +26,13 @@ document.getElementById("check").addEventListener(
 
         } else if (num > number) {
             // counter ++;
-            document.getElementById("result").innerHTML = ("A lower number please! ")
-        } else {
+            document.getElementById("result").innerHTML = ("A lower number please! ");
+        } else if (num < number) {
             // counter++;
-            document.getElementById("result").innerHTML = ("A higher number please! ")
+            document.getElementById("result").innerHTML = ("A higher number please! ");
+        } else if(isNaN(num)) {
+            counter --;
+            document.getElementById("result").innerHTML = ("Are you sure that this is a number?");
         }
         document.getElementById("nr_gamer").value='';   // Oyun bittikten sonra input icini sifirliyor..
         document.getElementById("nr_gamer").focus();   // input u focusluyor..
